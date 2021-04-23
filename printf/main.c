@@ -6,7 +6,7 @@
 /*   By: balbuque <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 17:18:56 by balbuque          #+#    #+#             */
-/*   Updated: 2021/04/22 18:59:18 by balbuque         ###   ########.fr       */
+/*   Updated: 2021/04/23 19:03:54 by balbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,11 @@
 int main()
 {
 	char c;
+	int  a;
 
 	c = 'b';
-	printf("teste1 %c\n", 'b');
-	printf("%c teste2\n",c);
-	printf("teste %c 3\n", c);
-	ft_printf("teste1 %c\n", 'b');
-	ft_printf("%c teste2\n", c);
-	ft_printf("teste %c 3\n", c);
+	printf("%5c\n", 'b');
+	a = ft_printf("%5c\n", c);
+	printf("%d", a);
 	return (0);
 }
