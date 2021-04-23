@@ -6,7 +6,7 @@
 /*   By: balbuque <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 13:55:34 by balbuque          #+#    #+#             */
-/*   Updated: 2021/04/23 18:11:47 by balbuque         ###   ########.fr       */
+/*   Updated: 2021/04/23 19:17:20 by balbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@ void	converter(va_list args, t_flags *flags)
 		char_converter(args, flags);
 }
 
-t_flags	init_flags(t_flags flags)
+t_flags	init_flags(t_flags *flags)
 {
-	flags.zero = 0;
-	flags.minus = 0;
-	flags.width = 0;
-	flags.precision = 0;
-	flags.conversion = '\0';
-	flags.counter = 0;
-	return (flags);
+	flags->zero = 0;
+	flags->minus = 0;
+	flags->width = 0;
+	flags->precision = 0;
+	flags->conversion = '\0';
+	flags->counter = 0;
+	return (*flags);
 }
 
 void	whatflags(char *str, va_list args, int *i, t_flags *flags)
@@ -52,7 +52,7 @@ int		read_string(char *str, va_list args)
 	t_flags flags;
 
 	i = 0;
-	init_flags(flags);
+	init_flags(&flags);
 	while (str[i] != '\0')
 	{
 		if (str[i] == '%')

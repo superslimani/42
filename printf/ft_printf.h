@@ -6,7 +6,7 @@
 /*   By: balbuque <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 15:42:22 by balbuque          #+#    #+#             */
-/*   Updated: 2021/04/23 18:16:38 by balbuque         ###   ########.fr       */
+/*   Updated: 2021/04/23 19:18:47 by balbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		ft_printf(const char *str, ...);
 int		read_string(char *str, va_list args);
 void	whatflags(char *str, va_list args, int *i, t_flags *flags);
 void	converter(va_list args, t_flags *flags);
-t_flags	init_flags(t_flags flags);
+t_flags	init_flags(t_flags *flags);
 void	get_zero(int *i, char *str, t_flags *flags);
 void	get_minus(int *i, char *str, t_flags *flags);
 void	get_width(int *i, char *str, t_flags *flags, va_list args);
